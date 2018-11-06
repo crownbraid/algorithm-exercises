@@ -53,8 +53,8 @@ function factorialize(num) {
 function lengthOfLongestWordInSentence(str) {
   return str
          .split(' ')
-  		   .sort((a, b) => b.length - a.length)
-  		   [0].length;
+         .sort((a, b) => b.length - a.length)
+         [0].length;
 }
 
 
