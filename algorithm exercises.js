@@ -68,7 +68,7 @@ function largestValuesOfSubarrs(arr) {
 
 
 
-// check if string ends with another string
+// check if string ends with another string without using .endsWith()
 function confirmEnding(str, target) {
   return str.slice(-target.length) == target;
 }
