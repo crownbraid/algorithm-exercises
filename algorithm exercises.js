@@ -52,9 +52,9 @@ function factorialize(num) {
 // Calc length of longest word in sentence
 function lengthOfLongestWordInSentence(str) {
   return str
-          .split(' ')
-  		  .sort((a, b) => b.length - a.length)
-  		  [0].length;
+         .split(' ')
+  		   .sort((a, b) => b.length - a.length)
+  		   [0].length;
 }
 
 
