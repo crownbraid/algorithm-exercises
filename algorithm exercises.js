@@ -10,15 +10,15 @@ you should get the set with elements which are in either of the two the sets but
 values (no duplicates).
 
 */
-function diffArr(arr1, arr2) {
+function symDiff(arr1, arr2) {
   return arr1
         .filter(num => !arr2.includes(num))
         .concat(arr2.filter(num => !arr1.includes(num)));
 }
-function sym(...args) {
-    let arr = args.reduce(diffArr).sort();
-    arr = arr.filter( (el, i, arr) => el != arr[i-1]);
-    console.log(arr);
+function multSymDiffs(...args) {
+    let diffAll = args.reduce(symDiff).sort();
+    let noDuplicates = diffAll.filter( (el, i, arr) => el != arr[i-1]);
+    console.log(noDuplicates);
 }
 
 
