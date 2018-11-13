@@ -15,9 +15,9 @@ function symDiff(arr1, arr2) {
          .concat(arr2.filter(num => !arr1.includes(num)));
 }
 function multSymDiffs(...args) {
-    let diffAll = args.reduce(symDiff).sort();
-    let diffAllNoDuplicates = diffAll.filter( (el, i, arr) => el != arr[i-1]);
-    return diffAllNoDuplicates;
+    let totDiff = args.reduce(symDiff).sort();
+    let totDiffNoDuplicates = totDiff.filter( (el, i, arr) => el != arr[i-1]);
+    return totDiffNoDuplicates;
 }
 
 
