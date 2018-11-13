@@ -16,8 +16,8 @@ function symDiff(arr1, arr2) {
 }
 function multSymDiffs(...args) {
     let diffAll = args.reduce(symDiff).sort();
-    let noDuplicates = diffAll.filter( (el, i, arr) => el != arr[i-1]);
-    console.log(noDuplicates);
+    let diffAllNoDuplicates = diffAll.filter( (el, i, arr) => el != arr[i-1]);
+    return diffAllNoDuplicates;
 }
 
 
