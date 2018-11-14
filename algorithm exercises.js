@@ -19,7 +19,7 @@ function multSymDiffs(...args) {
     let totDiffNoDuplicates = totDiff.filter( (el, i, arr) => el != arr[i-1]);
     return totDiffNoDuplicates;
 }
-
+ 
 
 
 
