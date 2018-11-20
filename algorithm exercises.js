@@ -1,15 +1,15 @@
 /* identify and count most frequent letter in a sentence */
 
 const mostCommonLetter = sentence => {
-	 const senLettersOnly = sentence.replace(/[^A-Za-z0-9]/g, '').split(''),
-		     uniqueLetters = [...new Set(senLettersOnly)];
+	const senLettersOnly = sentence.replace(/[^A-Za-z0-9]/g, '').split(''),
+	      uniqueLetters = [...new Set(senLettersOnly)];
 
 	 // Create array of objects listing count of each letter in the sentence => then reduce array to highest count
-	 return uniqueLetters.map(letter => {
-	    const count = senLettersOnly.filter(l => l == letter).length
-		  return {letter, count};
-	 })
-	 .reduce( (max, curr) => curr.count > max.count ? curr : max);
+	return uniqueLetters.map(letter => {
+		const count = senLettersOnly.filter(l => l == letter).length
+		return {letter, count};
+	})
+	.reduce( (max, curr) => curr.count > max.count ? curr : max);
 }
 
 /* Create a function that takes two or more arrays and returns an array of the symmetric 
