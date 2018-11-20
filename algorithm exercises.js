@@ -2,7 +2,7 @@
 
 const mostCommonLetter = sentence => {
 	const senLettersOnly = sentence.replace(/[^A-Za-z0-9]/g, '').split(''),
-	      uniqueLetters = [...new Set(senLettersOnly)];
+	      uniqueLetters = [...new Set(senLettersOnly)].sort();
 
 	 // Create array of objects listing count of each letter in the sentence => then reduce array to highest count
 	return uniqueLetters.map(letter => {
