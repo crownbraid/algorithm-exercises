@@ -104,6 +104,28 @@ function isBool(input) {
 }
 
 
+// numerical binary search
+const binarySearch = (array, value, start, end) => {
+    const start = start === undefined ? 0 : start;
+    const end = end === undefined ? array.length : end;
+
+    if (start > end) {
+        return -1;
+    }
+
+    var index = Math.floor((start + end) / 2);
+    var item = array[index];
+
+    if (item == value) {
+        return index;
+    }
+    else if (item < value) {
+        return binarySearch(array, value, index+1, end);
+    }
+    else if (item > value) {
+        return binarySearch(array, value, start, index-1);
+    }
+};
 
 
 // efficient palindrome checker
