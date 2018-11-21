@@ -1,5 +1,4 @@
-```
-
+```javascript
 /* identify and count most frequent letter in a sentence */
 
 const mostCommonLetter = sentence => {
