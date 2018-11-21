@@ -128,6 +128,47 @@ const binarySearch = (array, value, start, end) => {
 };
 
 
+// merge sort
+const mergeSort = array => {
+    if (array.length <= 1) {
+        return array;
+    }
+
+    const middle = Math.floor(array.length / 2);
+    let left = array.slice(0, middle),
+    	right = array.slice(middle, array.length);
+
+    left = mergeSort(left);
+    right = mergeSort(right);
+    return merge(left, right, array);
+};
+
+const merge = (left, right, array) => {
+    let leftIndex = 0,
+	rightIndex = 0,
+	outputIndex = 0;
+	
+    while (leftIndex < left.length && rightIndex < right.length) {
+        if (left[leftIndex] < right[rightIndex]) {
+            array[outputIndex++] = left[leftIndex++];
+        }
+        else {
+            array[outputIndex++] = right[rightIndex++];
+        }
+    }
+
+    for (var i=leftIndex; i<left.length; i++) {
+        array[outputIndex++] = left[i];
+    }
+
+    for (var i=rightIndex; i<right.length; i++) {
+        array[outputIndex++] = right[i];
+    }
+	
+    return array;
+};
+
+
 // efficient palindrome checker
 function isPalindrome(str) {
   let start = 0,
