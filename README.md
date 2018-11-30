@@ -15,7 +15,7 @@ const mostCommonLetter = sentence => {
 
  
 
-
+ 
 /* Create a function that takes two or more arrays and returns an array of the symmetric 
 difference (△ or ⊕) of the provided arrays.
 Given two sets (for example set A = {1, 2, 3} and set B = {2, 3, 4}), 
