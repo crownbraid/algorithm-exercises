@@ -1,4 +1,3 @@
-```javascript
 /* identify and count most frequent letter in a sentence */
 
 const mostCommonLetter = sentence => {
@@ -352,5 +351,3 @@ for (i = nums[0].length - 1; i > 2; i--) {
 }
 
 console.log(Math.max(...[hor, dia1, dia2, ver]));
-
-```
