@@ -1,20 +1,22 @@
+```javascript
 /* identify and count most frequent letter in a sentence */
 
 const mostCommonLetter = sentence => {
-	const sentMinify = sentence.replace(/[^A-Za-z0-9]/g, '').split(''),
-	      uniqueLetters = [...new Set(sentMinify)].sort();
+	const arrayOfSentAlphaNums = sentence.replace(/[^A-Za-z0-9]/gi, '').split(''),
+	      uniqueLetters = [...new Set(arrayOfSentAlphaNums)].sort();
 
 	 // Create array of objects listing count of each letter in the sentence => then reduce array to highest count
 	return uniqueLetters.map(letter => {
-		const count = sentMinify.filter(l => l == letter).length
+		const count = arrayOfSentAlphaNums.filter(l => l == letter).length
 		return {letter, count};
 	})
 	.reduce( (max, curr) => curr.count > max.count ? curr : max);
 }
 
+ 
+ 
 /* Create a function that takes two or more arrays and returns an array of the symmetric 
 difference (△ or ⊕) of the provided arrays.
-
 Given two sets (for example set A = {1, 2, 3} and set B = {2, 3, 4}), 
 the mathematical term "symmetric difference" of two sets is the set 
 of elements which are in either of the two sets, but not in both (A △ B = C = {1, 4}). 
@@ -22,7 +24,6 @@ For every additional symmetric difference you take (say on a set D = {2, 3}),
 you should get the set with elements which are in either of the two the sets but not both 
 (C △ D = {1, 4} △ {2, 3} = {1, 2, 3, 4}). The resulting array must contain only unique 
 values (no duplicates).
-
 */
 function symDiff(arr1, arr2) {
   return arr1.filter(num => !arr2.includes(num))
@@ -247,7 +248,6 @@ grid(25);
 
 
 /*You are given the following information, but you may prefer to do some research for yourself.
-
 1 Jan 1900 was a Monday.
 Thirty days has September,
 April, June and November.
@@ -352,3 +352,5 @@ for (i = nums[0].length - 1; i > 2; i--) {
 }
 
 console.log(Math.max(...[hor, dia1, dia2, ver]));
+
+```
