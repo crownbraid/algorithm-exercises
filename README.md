@@ -2,12 +2,12 @@
 /* identify and count most frequent letter in a sentence */
 
 const mostCommonLetter = sentence => {
-	const arrayOfSentAlphaNums = sentence.replace(/[^A-Za-z0-9]/gi, '').split(''),
-	      uniqueLetters = [...new Set(arrayOfSentAlphaNums)].sort();
+	const sentAsArrayOfAlphaNums = sentence.replace(/[^A-Za-z0-9]/gi, '').split(''),
+	      uniqueLetters = [...new Set( sentAsArrayOfAlphaNums)].sort();
 
 	 // Create array of objects listing count of each letter in the sentence => then reduce array to highest count
 	return uniqueLetters.map(letter => {
-		const count = arrayOfSentAlphaNums.filter(l => l == letter).length
+		const count =  sentAsArrayOfAlphaNums.filter(l => l == letter).length
 		return {letter, count};
 	})
 	.reduce( (max, curr) => curr.count > max.count ? curr : max);
