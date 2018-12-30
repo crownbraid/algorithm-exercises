@@ -38,7 +38,7 @@ function multSymDiffs(...args) {
 
 
 // Reverse String
-function FirstReverse(str) { 
+function reverse(str) { 
   return str.split('').reverse().join('');
 }
 
@@ -48,7 +48,7 @@ function FirstReverse(str) {
 
 /* given an array and some number of arguments, 
 return an array with no instances that equal the additional arguments. */
-const destroyer = (arr, ...args) => arr.filter( num => !args.includes(num));
+const removeArgsFromArray = (arr, ...args) => arr.filter( num => !args.includes(num));
 
 
 
