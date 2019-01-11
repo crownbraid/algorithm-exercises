@@ -36,7 +36,7 @@ function multSymDiffs(...args) {
  
  
 
-
+ 
 // Reverse String
 function reverse(str) { 
   return str.split('').reverse().join('');
