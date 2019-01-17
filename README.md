@@ -334,7 +334,7 @@ for (i = 0; i < nums[0].length; i++) {
     var adj = nums[j][i] * nums[j + 1][i] * nums[j + 2][i] * nums[j + 3][i];
     if (adj > ver) {ver = adj;}
   }
-}
+} 
 
 for (i = 0; i < nums[0].length - 3; i++) {
   for (j = 0; j < nums.length - 3; j++) {
