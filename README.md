@@ -176,6 +176,7 @@ function isPalindrome(str) {
   	  txt = str.toLowerCase();
 
   while (end > start) {
+    // check if this is faster than initializing var 'txt' without special characters
     if (txt[start].match(/[\W_]/)) {start++; continue;}
     if (txt[end].match(/[\W_]/)) {end--; continue;}
     
