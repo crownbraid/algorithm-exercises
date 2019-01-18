@@ -278,17 +278,16 @@ console.log(Mondays());
 
 
 
-// find the Pythagorean triplet (a2 + b2 = c2) for which a + b + c = 1000.
-var a, b, c, abTest;
+// find the Pythagorean triplet (a^2 + b^2 = c^2) for which a + b + c = 1000.
+var a, b, c, abAddedSquares;
 
 for (a = 0; a < 1000; a++) {
   for (b = a + 1; b < 1000; b++) {
     c = 1000 - a - b;
     if (c <= b) {break;}
-    abTest = Math.pow(a, 2) + Math.pow(b, 2);
-    if (abTest == Math.pow(c, 2)) {
-      // console.log("a equals: " + a + " b equals: " + b + " c equals: " + c);
-      console.log(a * b * c);
+    abAddedSquares = Math.pow(a, 2) + Math.pow(b, 2);
+    if (abAddedSquares == Math.pow(c, 2)) {
+      console.log("a equals: " + a + ", b equals: " + b + ", c equals: " + c);
     }
   }
 }
